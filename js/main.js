@@ -63,6 +63,20 @@
         dots: false,
         loop: true,
     });
+
+        
+        /* Preloader */
+        $(window).on('load', function() {
+            var preloaderFadeOutTime = 200;
+            function hidePreloader() {
+                var preloader = $('.spinner-wrapper');
+                setTimeout(function() {
+                    preloader.fadeOut(preloaderFadeOutTime);
+                }, 200);
+            }
+            hidePreloader();
+        });
+    
     
 })(jQuery);
 
